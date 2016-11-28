@@ -1,0 +1,165 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+@mixin user-select-non {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+@mixin padding-start-non {
+	-moz-padding-start: 0px !important;
+	-webkit-padding-start: 0px !important;
+	-khtml-padding-start: 0px !important;
+	-o-padding-start: 0px !important;
+	padding-start: 0px !important;	
+}
+@mixin hidden-no {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100) !important; /* IE 5.5+*/
+	-moz-opacity: 1 !important; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: 1 !important; /* Konqueror 3.1, Safari 1.1 */
+	opacity: 1 !important; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+, Chrome 5+, IE 9+ */
+}
+@mixin hidden-yes {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); /* IE 5.5+*/
+	-moz-opacity: 0 !important; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: 0 !important; /* Konqueror 3.1, Safari 1.1 */
+	opacity: 0 !important; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+, Chrome 5+, IE 9+ */
+}
+@mixin delay0 {
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;	
+}
+@mixin delay025 {
+	-webkit-animation-delay: .25s;
+	-moz-animation-delay: .25s;
+	-o-animation-delay: .25s;
+	animation-delay: .25s;	
+}
+@mixin delay05 {
+	-webkit-animation-delay: .5s;
+	-moz-animation-delay: .5s;
+	-o-animation-delay: .5s;
+	animation-delay: .5s;	
+}
+@mixin transition0 {
+	-moz-transition: all .175s ease;
+	-webkit-transition: all .175s ease;
+    transition: all .175s ease;
+}
+@mixin transition {
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+@mixin transition2 {
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+@mixin transition3 {
+	-moz-transition: top .25s, transform .35s;
+	-webkit-transition: top .25s, transform .35s;
+    transition: top .25s, transform .35s;
+}
+@mixin transition4 {
+	-moz-transition: all 3s ease;
+	-webkit-transition: all 3s ease;
+    transition: all 3s ease;
+}
+@mixin border-rad5 {
+	-moz-border-radius: 5px; /*для Firefox */
+	-webkit-border-radius: 5px; /* Safari и Chrome */
+	border-radius: 5px; /* Opera 10.5+, а также версии других браузеров в будущем */
+	// -khtml-border-radius: 10px;
+	// behavior: url(border-radius.htc);
+}
+@mixin border-rad10 {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+@mixin border-rad50 {
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+@mixin border-rad50-perc {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+@mixin border-rad100-perc {
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%; 
+}
+@mixin border-bottom-header {
+	-webkit-border-bottom-left-radius: 50px;
+	-webkit-border-bottom-right-radius: 50px;
+	-moz-border-bottom-left-radius: 50px;
+	-moz-border-bottom-right-radius: 50px;		
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+@mixin top-gradient {
+	background-image: -webkit-linear-gradient(to bottom, rgba(47,47,47,.9) 12%, rgba(47,47,47,.77) 30%, rgba(47,47,47,.65) 40%, rgba(47,47,47,.55) 55%, rgba(47,47,47,.2));
+	background-image: -moz-linear-gradient(to bottom, rgba(47,47,47,.9) 12%, rgba(47,47,47,.77) 30%, rgba(47,47,47,.65) 40%, rgba(47,47,47,.55) 55%, rgba(47,47,47,.2));
+	background-image: -o-linear-gradient(to bottom, rgba(47,47,47,.9) 12%, rgba(47,47,47,.77) 30%, rgba(47,47,47,.65) 40%, rgba(47,47,47,.55) 55%, rgba(47,47,47,.2));
+	background-image: linear-gradient(to bottom, rgba(47,47,47,.9) 12%, rgba(47,47,47,.77) 30%, rgba(47,47,47,.65) 40%, rgba(47,47,47,.55) 55%, rgba(47,47,47,.2));	
+}
+.transition {
+	@include transition;
+}
+.nop {
+	padding-left:0;
+	padding-right:0;
+}
+.visible {
+	visibility: visible !important;
+}
+$ff1: Arial, sans-serif;
+$ff2: Helvetica, Arial, sans-serif;
+.col-xss-1, .col-xss-2, .col-xss-3, .col-xss-4, .col-xss-5, .col-xss-6, .col-xss-7, .col-xss-8, .col-xss-9, .col-xss-10, .col-xss-11, .col-xss-12,
+.col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+	float: left;
+	display: block;
+}
+@media (min-width: 460px) and (max-width: 767px) {
+	.col-xss-12 {width: 100% !important}
+	.col-xss-11 {width: 91.66% !important}
+	.col-xss-10 {width: 83.33% !important}	
+	.col-xss-9 {width: 75% !important}
+	.col-xss-8 {width: 66.66% !important}
+	.col-xss-7 {width: 58.33% !important}
+	.col-xss-6 {width: 50% !important}
+	.col-xss-5 {width: 41.66% !important}
+	.col-xss-4 {width: 33.33% !important}
+	.col-xss-3 {width: 25% !important}
+	.col-xss-2 {width: 16.66% !important}
+	.col-xss-1 {width: 8.33% !important}
+}
+@media (min-width: 240px) and (max-width: 459) {
+	.col-xxs-12 {width: 100% !important}
+	.col-xxs-11 {width: 91.66% !important}
+	.col-xxs-10 {width: 83.33% !important}	
+	.col-xxs-9 {width: 75% !important}
+	.col-xxs-8 {width: 66.66% !important}
+	.col-xxs-7 {width: 58.33% !important}
+	.col-xxs-6 {width: 50% !important}
+	.col-xxs-5 {width: 41.66% !important}
+	.col-xxs-4 {width: 33.33% !important}
+	.col-xxs-3 {width: 25% !important}
+	.col-xxs-2 {width: 16.66% !important}
+	.col-xxs-1 {width: 8.33% !important}	
+}
+.ul-blocked {
+	@include padding-start-non;
+	margin: 0;
+	list-style:none;
+}
